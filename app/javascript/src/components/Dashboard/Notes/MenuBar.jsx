@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Search, Plus, Settings } from "@bigbinary/neeto-icons";
-import { Typography } from "@bigbinary/neetoui";
-import { MenuBar as NeetoMenuBar } from "@bigbinary/neetoui/layouts";
+import { Search, Plus, Settings } from "neetoicons";
+import { Typography } from "neetoui";
+import { MenuBar as NeetoMenuBar } from "neetoui/layouts";
 
 import { MENUBAR_BLOCKS } from "./constants";
 

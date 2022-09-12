@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import { Button, PageLoader } from "@bigbinary/neetoui";
-import { Container, Header } from "@bigbinary/neetoui/layouts";
 import EmptyNotesListImage from "images/EmptyNotesList";
+import { Button, PageLoader } from "neetoui";
+import { Container, Header } from "neetoui/layouts";
 
 import notesApi from "apis/notes";
 import EmptyState from "components/Common/EmptyState";
@@ -45,7 +45,7 @@ const Notes = () => {
       <MenuBar />
       <Container>
         <Header
-          menuBarToggle={function noRefCheck() {}}
+          menuBarToggle={() => {}}
           title="All Notes"
           actionBlock={
             <Button
