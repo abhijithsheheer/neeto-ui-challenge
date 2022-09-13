@@ -5,13 +5,21 @@ import { Typography, Dropdown, Tag, Avatar, Tooltip } from "neetoui";
 
 import { calculateCreatedAgo, formatDatetoWeekdayTime } from "./utils";
 
-const Note = ({ note }) => (
+const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
   <div className="m-3 w-full space-y-2 rounded-sm border p-5 shadow-md">
     <div className="flex justify-between">
       <Typography style="h3">{note.title}</Typography>
       <Dropdown buttonStyle="text" icon={MenuVertical}>
         <li className="m-2">Edit</li>
-        <li className="m-2">Delete</li>
+        <li
+          className="m-2"
+          onClick={() => {
+            setSelectedNoteIds(note.id);
+            setShowDeleteAlert(true);
+          }}
+        >
+          Delete
+        </li>
       </Dropdown>
     </div>
     <Typography className="text-gray-500" style="body1">
