@@ -6,7 +6,10 @@ import { Typography, Dropdown, Tag, Avatar, Tooltip } from "neetoui";
 import { calculateCreatedAgo, formatDatetoWeekdayTime } from "./utils";
 
 const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
-  <div className="m-3 w-full space-y-2 rounded-sm border p-5 shadow-md">
+  <div
+    className="neeto-ui-shadow-s neeto-ui-rounded neeto-ui-border-gray-400 m-3 w-full
+  space-y-2 border p-5"
+  >
     <div className="flex justify-between">
       <Typography style="h3">{note.title}</Typography>
       <Dropdown buttonStyle="text" icon={MenuVertical}>
@@ -22,13 +25,13 @@ const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
         </li>
       </Dropdown>
     </div>
-    <Typography className="text-gray-500" style="body1">
+    <Typography className="neeto-ui-text-gray-500" style="body1">
       {note.description}
     </Typography>
     <hr />
     <div className="flex items-center">
       <Tag
-        className="bg-gray-100 text-gray-500"
+        className="neeto-ui-bg-gray-100 neeto-ui-text-gray-500"
         label="Getting Started"
         type="outline"
       />
@@ -38,7 +41,7 @@ const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
           content={formatDatetoWeekdayTime(note.updated_at)}
           positon="bottom"
         >
-          <Typography className="text-gray-500" style="body2">
+          <Typography className="neeto-ui-text-gray-500" style="body2">
             {calculateCreatedAgo(note.created_at)}
           </Typography>
         </Tooltip>
