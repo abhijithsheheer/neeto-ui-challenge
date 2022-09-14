@@ -3,7 +3,7 @@ import React from "react";
 import { MenuHorizontal } from "neetoicons";
 import { Dropdown, Typography, Avatar } from "neetoui";
 
-export const CONTACTS_TABLE_COLUMN = [
+export const getContactTableColumnData = showAlert => [
   {
     title: "Name & Role",
     width: "30%",
@@ -38,7 +38,12 @@ export const CONTACTS_TABLE_COLUMN = [
     render: () => (
       <Dropdown buttonStyle="text" icon={MenuHorizontal}>
         <li className="m-1">Edit</li>
-        <li className="m-1" onClick={() => {}}>
+        <li
+          className="m-1"
+          onClick={() => {
+            showAlert();
+          }}
+        >
           Delete
         </li>
       </Dropdown>
