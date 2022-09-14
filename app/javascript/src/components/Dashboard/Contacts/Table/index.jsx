@@ -2,16 +2,16 @@ import React from "react";
 
 import { Table as NeetoUITable } from "neetoui";
 
-import { CONTACTS_TABLE_COLUMN } from "./TableColumn";
+import { getContactTableColumnData } from "./TableColumn";
 
 import { CONTACT_DETAILS } from "../constants";
 
-const Table = () => (
+const Table = ({ showAlert }) => (
   <div className="w-full">
     <NeetoUITable
       allowRowClick={false}
       className="neeto-ui-text-gray-400"
-      columnData={CONTACTS_TABLE_COLUMN}
+      columnData={getContactTableColumnData(showAlert)}
       currentPageNumber={1}
       defaultPageSize={10}
       handlePageChange={() => {}}
