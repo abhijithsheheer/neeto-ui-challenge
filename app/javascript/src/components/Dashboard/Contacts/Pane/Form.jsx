@@ -72,7 +72,7 @@ const Form = ({ onClose }) => {
               type="submit"
             />
             <Button
-              className="text-gray-500"
+              className="neeto-ui-text-gray-500"
               label="Cancel"
               size="large"
               style="text"

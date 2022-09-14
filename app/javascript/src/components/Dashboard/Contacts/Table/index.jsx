@@ -10,7 +10,7 @@ const Table = () => (
   <div className="w-full">
     <NeetoUITable
       allowRowClick={false}
-      className="neeto-ui-gray-400"
+      className="neeto-ui-text-gray-400"
       columnData={CONTACTS_TABLE_COLUMN}
       currentPageNumber={1}
       defaultPageSize={10}
