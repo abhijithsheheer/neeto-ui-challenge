@@ -17,11 +17,7 @@ const Contacts = () => {
           menuBarToggle={() => {}}
           title="All Contacts"
           actionBlock={
-            <Button
-              icon="ri-add-line"
-              label="Add New Contact"
-              onClick={() => {}}
-            />
+            <Button icon="ri-add-line" label="Add Contact" onClick={() => {}} />
           }
           searchProps={{
             value: searchTerm,
