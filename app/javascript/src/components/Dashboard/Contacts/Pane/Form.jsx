@@ -16,7 +16,7 @@ const Form = ({ onClose }) => {
 
   const handleSubmit = () => {
     setSubmitted(true);
-    Toastr.success("Contact was successfully created!");
+    Toastr.success("Contact added successfully.");
     onClose();
   };
 
